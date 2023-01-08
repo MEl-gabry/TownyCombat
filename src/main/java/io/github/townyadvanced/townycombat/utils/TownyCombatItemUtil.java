@@ -94,7 +94,7 @@ public class TownyCombatItemUtil {
 			ItemMeta itemMeta = result.getItemMeta();
 			itemMeta.setDisplayName(TownyCombatSettings.getNewItemsSpearNativeWeaponName());
             //add custom model data
-            itemMeta.setCustomModelData(TownyCombatSettings.getNewItemsWarhammerCustomModelDataID());
+            itemMeta.setCustomModelData(TownyCombatSettings.getNewItemsSpearCustomModelDataID());
 			//Add enchants
 			itemMeta.addEnchant(Enchantment.DAMAGE_ALL, NATIVE_SPEAR_SHARPNESS_LEVEL, true);
 			//Add lore
@@ -114,7 +114,7 @@ public class TownyCombatItemUtil {
 			itemMeta.addEnchant(Enchantment.DAMAGE_ALL, NATIVE_WARHAMMER_SHARPNESS_LEVEL, true);
 			itemMeta.addEnchant(Enchantment.KNOCKBACK, 1, true);
             //add custom model data
-            itemMeta.setCustomModelData(TownyCombatSettings.getNewItemsSpearCustomModelDataID());
+            itemMeta.setCustomModelData(TownyCombatSettings.getNewItemsWarhammerCustomModelDataID());
 			//Add lore
 			List<String> lore = new ArrayList<>();
 			lore.add(TownyCombatSettings.getNewItemsWarhammerLore());
