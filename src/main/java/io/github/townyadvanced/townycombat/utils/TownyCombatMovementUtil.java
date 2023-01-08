@@ -84,6 +84,16 @@ public class TownyCombatMovementUtil {
             for(ItemStack itemStack: player.getInventory().getContents()) {
                 if(itemStack != null) {
                     itemEncumbrancePercentage = materialEncumbrancePercentageMap.get(itemStack.getType());
+                    if(itemStack.getType() == TownyCombatItemUtil.NATIVE_SPEAR_PLACEHOLDER_MATERIAL) {
+                        if(itemStack.getItemMeta().getCustomModelData() != TownyCombatSettings.getNewItemsSpearCustomModelDataID()) {
+                            itemEncumbrancePercentage = 0.0;
+                        }
+                    }
+                    else if(itemStack.getType() == TownyCombatItemUtil.NATIVE_WARHAMMER_PLACEHOLDER_MATERIAL) {
+                        if(itemStack.getItemMeta().getCustomModelData() != TownyCombatSettings.getNewItemsWarhammerCustomModelDataID()) {
+                            itemEncumbrancePercentage = 0.0;
+                        }
+                    }
                     if(itemEncumbrancePercentage != null) {
                         totalEncumbrancePercentage += itemEncumbrancePercentage;
                     }
