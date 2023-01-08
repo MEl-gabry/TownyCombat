@@ -286,11 +286,6 @@ public class TownyCombatBukkitEventListener implements Listener {
 	public void on (PrepareItemCraftEvent event) {
 		if (!TownyCombatSettings.isTownyCombatEnabled())
 			return;
-		if(event.getInventory().getResult() != null
-				&& TownyCombatItemUtil.isVanillaPlaceholderItem(event.getInventory().getResult())) {
-			event.getInventory().setResult(null);
-			return; //Cannot craft or repair forbidden item
-		}
 		if(event.isRepair()) {
 			//Repair
 			if(event.getInventory().getResult() != null
